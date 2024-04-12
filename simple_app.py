@@ -42,6 +42,7 @@ p1 = Pegawai("Muthia Aisyah Putri", "1234567890", 2019, "AMGR", "Data Engineer",
 p2 = Pegawai("Ikhwanul Muslimim", "6543210965", 2018, "MGR", "Data Scientist", 71)
 p3 = Pegawai("Moch Fahrudin", "6574323421", 2023, "AVP", "Accounting", 85)
 p4 = Pegawai("Putriani", "2346543721", 2020, "OS", "HR", 79)
+p5 = Pegawai("Sheila Nur", "4446543721", 2021, "AMGR", "IOS", 81)
 
 p1.pithing()
 p2.terlambat()
@@ -49,6 +50,9 @@ p2.terlambat()
 p3.pithing()
 p1.terlambat()
 p4.terlambat()
+p5.pithing()
+
+# Memulai proses parallel
 
 if __name__ == "__main__":
     # Proses parallel untuk mengecek kenaikan gaji pegawai
@@ -56,13 +60,17 @@ if __name__ == "__main__":
     process2 = multiprocessing.Process(target=parallel_cek_naik_gaji, args=(p2,))
     process3 = multiprocessing.Process(target=parallel_cek_naik_gaji, args=(p3,))
     process4 = multiprocessing.Process(target=parallel_cek_naik_gaji, args=(p4,))
+    process5 = multiprocessing.Process(target=parallel_cek_naik_gaji, args=(p5,))
 
     process1.start()
     process2.start()
     process3.start()
     process4.start()
+    process5.start()
+
 
     process1.join()
     process2.join()
     process3.join()
     process4.join()
+    process5.join()
