@@ -1,6 +1,9 @@
 # Simple_App
 This is a repository for a simple Python application. I've developed an application during a previous Python bootcamp session, which contains employee data. The objective is to enable this application to determine whether employees are eligible for a salary increase or not.
 
+# ADDITION
+This repo also contain my task of scrapping
+
 # Steps
 1. git init
 2. git config user.name username
